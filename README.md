@@ -1,4 +1,4 @@
-Here's a detailed README for the Quiz Game app you built above:
+Kindly refer to the [Google Drive link](https://drive.google.com/drive/folders/1UDaI8kAzwYDs0BdxYMK6umG73e0rhl06?usp=sharing) for the video demonstration and the release APK.
 
 ---
 
