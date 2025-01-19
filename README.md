@@ -2,11 +2,21 @@ Kindly refer to the [Google Drive link](https://drive.google.com/drive/folders/1
 
 ---
 
+
 # Quiz Game App
 
-This is a mobile application built using **Flutter** for Android and iOS that provides an interactive quiz game experience. The app allows users to take quizzes, see their answers, check their results, and receive feedback in real-time. 
+The **Quiz Game App** is a cross-platform mobile application built with **Flutter** for both **Android** and **iOS**. This gamified quiz app offers an engaging experience where users answer multiple-choice questions within a time limit. The app tracks the user's performance, shows results, and provides feedback on incorrect answers.
 
 ---
+<div style="display: flex; flex-wrap: wrap;">
+  <img src="https://github.com/user-attachments/assets/b57731f5-4d23-4ba6-9f83-6616ccd28aa9" style="width: 200px; margin: 10px;" />
+  <img src="https://github.com/user-attachments/assets/7570abd8-95f4-41a9-8d7d-fa9ee9ecc435" style="width: 200px; margin: 10px;" />
+  <img src="https://github.com/user-attachments/assets/e168dd11-6511-4bbf-9fb4-edb7dcf3b38d" style="width: 200px; margin: 10px;" />
+  <img src="https://github.com/user-attachments/assets/08d0eb80-b748-462c-8b6a-43d07ee864a7" style="width: 200px; margin: 10px;" />
+  <img src="https://github.com/user-attachments/assets/34b9385a-162f-4389-8b0f-b216527df88c" style="width: 200px; margin: 10px;" />
+  <img src="https://github.com/user-attachments/assets/2a84deb7-a9e8-48b6-a171-7d9c90cecae7" style="width: 200px; margin: 10px;" />
+</div>
+
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -23,36 +33,43 @@ This is a mobile application built using **Flutter** for Android and iOS that pr
 
 ## Introduction
 
-The **Quiz Game App** allows users to engage in interactive quizzes. The app presents questions, tracks user progress, and provides a countdown timer for each question. The app also keeps track of the user's selected answers and evaluates them based on correct/incorrect responses. At the end of the quiz, the app displays a result screen showing the user's score and correct answers.
+The **Quiz Game App** is an interactive and gamified quiz application that runs on both **Android** and **iOS**. Users are presented with multiple-choice questions, and they have **60 seconds** to select the correct answer for each question. If the answer is correct, the option is highlighted in **green**, and if incorrect, it turns **red**. If the user fails to answer in time, the next question is automatically shown.
+
+Upon completing the quiz, the **Result Screen** displays important performance metrics, such as:
+- Correct answers
+- Incorrect answers
+- Accuracy score
+- Performance overview
+Additionally, the app shows a comparison of **wrong answers** with the **correct answers** for each question.
 
 ---
 
 ## Features
 
-- **Interactive Quiz Interface:** Users can take a quiz with multiple choice questions.
-- **Timer:** Each question has a countdown timer, which moves the user to the next question once the time runs out.
-- **Real-Time Answer Selection:** Users can select their answers in real time.
-- **Question Progress:** Shows the current question number and the total number of questions.
-- **Results Page:** Displays the user’s performance at the end of the quiz, with selected answers and correct answers.
-- **Color-Coded Options:** Selected answers are highlighted with different colors depending on whether they are correct or incorrect.
+- **Interactive Quiz Interface**: Users can answer multiple-choice questions in a fun and engaging way.
+- **Timer for Each Question**: Each question comes with a **60-second timer**. If the user doesn't answer within the time limit, the next question automatically appears.
+- **Gamified Answer Feedback**: Correct answers are highlighted in **green**, while incorrect answers turn **red**.
+- **Performance Metrics**: After completing the quiz, users are shown performance statistics like accuracy, correct answers, wrong answers, and more.
+- **Correct vs. Wrong Answers Comparison**: Users can review the questions they answered incorrectly and see the correct answers.
+- **Platform Compatibility**: Available on both **Android** and **iOS**, ensuring a smooth experience across devices.
 
 ---
 
 ## Tech Stack
 
-- **Flutter**: The cross-platform framework used for building the mobile app.
-- **Dart**: The programming language used in Flutter.
-- **Android & iOS**: The app is designed to run on both Android and iOS platforms.
+- **Flutter**: The framework for building cross-platform mobile apps (Android & iOS).
+- **Dart**: The programming language used to develop the app.
+- **Android & iOS**: The app is designed to run seamlessly on both platforms.
 
 ---
 
 ## Installation
 
-Follow the steps below to set up the Quiz Game app locally on your machine:
+Follow these steps to set up the Quiz Game app locally on your machine:
 
 ### Prerequisites
 
-Make sure you have the following installed:
+Ensure you have the following installed:
 - **Flutter SDK**: [Flutter Install Guide](https://flutter.dev/docs/get-started/install)
 - **Dart SDK** (comes bundled with Flutter)
 - **Android Studio** or **Visual Studio Code** (with Flutter and Dart plugins)
@@ -68,11 +85,11 @@ Make sure you have the following installed:
    ```bash
    cd quiz_game_app
    ```
-3. Install the dependencies:
+3. Install dependencies:
    ```bash
    flutter pub get
    ```
-4. Run the app on an Android or iOS emulator, or connect a physical device:
+4. Run the app on an Android or iOS emulator or a physical device:
    ```bash
    flutter run
    ```
@@ -103,45 +120,46 @@ quiz_game_app/
 ## App Overview
 
 ### 1. **QuizScreen**
-The main screen of the app where the user answers the questions. It displays:
-- The current question and options.
-- A timer for each question.
-- The user's selected answer is tracked.
+The main screen where users interact with the quiz. It displays:
+- The current question and answer choices.
+- A countdown timer for each question (60 seconds).
+- Real-time selection of answers.
 
 **Key Functions:**
-- `startTimer`: Starts the countdown timer for each question.
-- `moveToNextQuestion`: Moves the app to the next question after the timer ends or when the user selects an answer.
-- `optionSelected`: Tracks the user's selected answer to change the UI color accordingly (correct/incorrect).
+- `startTimer`: Starts the countdown for each question.
+- `moveToNextQuestion`: Automatically moves to the next question after the timer ends or when the user selects an answer.
+- `optionSelected`: Updates the UI to highlight the selected answer with green (correct) or red (incorrect).
 
 ### 2. **ResultScreen**
-This screen is shown after the quiz ends, displaying the results:
-- The answers selected by the user.
-- The correct answers.
-- The total score achieved.
+This screen is shown once the user has answered all the questions:
+- Displays the answers selected by the user.
+- Highlights correct and incorrect answers.
+- Shows performance metrics like the total score, accuracy, and a comparison between the correct and incorrect answers.
 
 ---
 
 ## Code Explanation
 
 ### Main Components:
-- **QuizScreen**: This is the main screen where the quiz is presented to the user. It manages the display of questions and answers, the countdown timer, and transitions to the next question when time runs out or when the user selects an answer.
-- **ResultScreen**: After completing the quiz, this screen displays the results, including the selected answers, correct answers, and the final score.
+- **QuizScreen**: Displays the questions and options. It manages the countdown timer and tracks user selection.
+- **ResultScreen**: Shows the performance overview after completing the quiz. The screen includes the user's answers, correct answers, and overall performance.
 
-### Important Variables and Logic:
-- **selectedAnswers**: A `Map<int, int?>` that tracks the answers selected by the user for each question.
-- **correctAnswers**: A `Map<int, int?>` that tracks the correct answers for each question.
-- **currentQuestionIndex**: Keeps track of the index of the current question.
-- **remainingTime**: The remaining time for the current question (60 seconds).
-- **optionSelected**: Keeps track of the selected options for each question to visually highlight them.
+### Key Variables and Logic:
+- **selectedAnswers**: A map that stores the user's selected answers for each question.
+- **correctAnswers**: A map that stores the correct answers for each question.
+- **currentQuestionIndex**: Keeps track of the current question being displayed.
+- **remainingTime**: Holds the remaining time for each question (starts from 60 seconds).
+- **optionSelected**: Tracks the selected option for the current question and updates the UI to indicate correctness.
 
 ### Timer Implementation:
 - A `Timer` is used to update the countdown every second.
-- When the timer runs out, the quiz automatically moves to the next question or submits the quiz if it's the last question.
+- Once the timer reaches zero, the quiz automatically proceeds to the next question.
+- If the user selects an answer before the timer runs out, the selected answer is immediately evaluated.
 
 ### UI Design:
-- The app uses **Material Design** components to create a user-friendly interface.
-- The app dynamically updates the UI based on the timer and user interactions.
-- Each question is displayed along with the possible answers, and the selected answer is highlighted based on correctness.
+- **Material Design** is used to create a clean and simple interface.
+- The app dynamically updates based on user interaction and the countdown timer.
+- Visual feedback (color change) is provided when users select answers, helping them understand whether they answered correctly or incorrectly.
 
 ---
 
@@ -163,5 +181,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-This README provides all the details you need to understand, set up, and contribute to the **Quiz Game App**. Enjoy building and improving it!
+This README provides a comprehensive guide for understanding, setting up, and contributing to the **Quiz Game App**. Enjoy building and enhancing the app!
 
