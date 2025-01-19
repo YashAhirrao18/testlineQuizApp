@@ -4,15 +4,7 @@
 .packages
 pubspec.lock
 
-# Build and generated files
-build/
-macos/
-windows/
-linux/
-ios/
-android/
-web/
-test/
+
 
 # Flutter specific
 .flutter-plugins
