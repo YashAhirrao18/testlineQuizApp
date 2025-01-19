@@ -4,7 +4,11 @@
 .packages
 pubspec.lock
 
-
+# Build and generated files
+ios/
+android/
+web/
+test/
 
 # Flutter specific
 .flutter-plugins
