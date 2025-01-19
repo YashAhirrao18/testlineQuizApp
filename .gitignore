@@ -1,0 +1,54 @@
+# Dart specific
+*.dart_tool/
+*.packages
+.packages
+pubspec.lock
+
+# Build and generated files
+build/
+macos/
+windows/
+linux/
+ios/
+android/
+web/
+test/
+
+# Flutter specific
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-plugins-version
+.flutter
+.flutter-keys
+metadata
+.macos/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ
+.idea/
+*.iml
+
+# Logs and crash reports
+*.log
+crashlytics/
+firebase/
+*.crash
+*.diff
+*.orig
+
+# macOS Finder
+.DS_Store
+
+# Files for local testing and configuration
+.env
+.env.*
+*.local
+*.lock
+
+# Flutter generated localization files
+.l10n/
+intl_translation/
+generated/
